@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DecodeLabs | Static Webpage Design</title>
+  <!-- Google Fonts (Outfit & Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+  <!-- Header Section (Macro Layout: 64px Height, Flexbox Alignment) -->
+  <header class="header">
+    <div class="header__container">
+      <div class="header__logo">
+        <span class="header__logo-text">DECODE<span class="header__logo-highlight">LABS</span></span>
+      </div>
+      <!-- Main Nav < 5 items (Exactly 4 items matching sitemap vehicle diagram) -->
+      <nav class="header__nav" aria-label="Main Navigation">
+        <ul class="header__menu">
+          <li class="header__menu-item"><a href="#home" class="header__menu-link header__menu-link--active">Home</a></li>
+          <li class="header__menu-item"><a href="#about" class="header__menu-link">About</a></li>
+          <li class="header__menu-item"><a href="#services" class="header__menu-link">Services</a></li>
+          <li class="header__menu-item"><a href="#contact" class="header__menu-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a href="#contact" class="button button--primary-outline">Get in Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- Hero Section (One H1 Page-wide, Full Viewport/300-400px visual height) -->
+    <section class="hero" id="home">
+      <div class="hero__overlay"></div>
+      <div class="hero__container">
+        <div class="hero__badge">Engineering Foundations</div>
+        <h1 class="hero__title">Build it well, for the frontend is the only part of the system the world will ever see.</h1>
+        <p class="hero__subtitle">Constructing pixel-perfect static foundations with technical integrity, clean structure, and modern aesthetics.</p>
+        <div class="hero__actions">
+          <a href="#services" class="button button--primary">Explore Services</a>
+          <a href="#about" class="button button--secondary">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section (Grid Layout: Info Card + Image Card) -->
+    <section class="about" id="about">
+      <div class="about__container">
+        <div class="about__content">
+          <h2 class="section-title">The Architect's Mandate</h2>
+          <div class="section-divider"></div>
+          <p class="about__text">The absolute best way to master Frontend Development is through hands-on practice, not just theory. Before building dynamic applications, you must master the fundamental relationship between content and style.</p>
+          <p class="about__text">Here at DecodeLabs, we prioritize accessibility, structured markup, and semantic integrity. Code does not ship until it passes W3C validation, accessibility audits, and design regression checks.</p>
+          
+          <div class="about__stats">
+            <div class="stat-box">
+              <span class="stat-box__number">99%</span>
+              <span class="stat-box__label">Lighthouse Score</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-box__number">A11y</span>
+              <span class="stat-box__label">Compliant</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about__image-wrapper">
+          <!-- Localized image path and explicit width/height for CLS prevention -->
+          <img src="images/about-img.webp" 
+               alt="A clean dark workspace with a laptop displaying colored lines of clean HTML and CSS code" 
+               class="about__image"
+               width="600" 
+               height="600">
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section (CSS Grid: Macro Layout, Flexbox: Micro Layout) -->
+    <section class="services" id="services">
+      <div class="services__container">
+        <div class="services__header">
+          <span class="services__subtitle">Quality Gate</span>
+          <h2 class="section-title">Foundations of Visual Architecture</h2>
+          <div class="section-divider section-divider--center"></div>
+        </div>
+
+        <!-- 3-Column Macro Grid -->
+        <div class="services__grid">
+          
+          <!-- Card 1 -->
+          <article class="card">
+            <div class="card__icon-box">
+              <i class="fa-solid fa-layer-group card__icon" aria-hidden="true"></i>
+            </div>
+            <h3 class="card__title">Semantic Structure</h3>
+            <p class="card__description">Using precise HTML5 landmarks like header, main, and footer. Ensuring machine readability for SEO and assistive screen readers.</p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card">
+            <div class="card__icon-box">
+              <i class="fa-solid fa-universal-access card__icon" aria-hidden="true"></i>
+            </div>
+            <h3 class="card__title">A11y Standards</h3>
+            <p class="card__description">Strict adherence to contrast ratios (&gt; 4.5:1), complete input labels, and descriptive alternative text for all visual assets.</p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card">
+            <div class="card__icon-box">
+              <i class="fa-solid fa-code card__icon" aria-hidden="true"></i>
+            </div>
+            <h3 class="card__title">CSS Engineering</h3>
+            <p class="card__description">Strict DRY architecture using modular CSS variables and BEM methodology. Zero inline styles or ID selectors in stylesheets.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section (6-Card Grid Layout with localized paths) -->
+    <section class="portfolio" id="portfolio">
+      <div class="portfolio__container">
+        <div class="portfolio__header">
+          <span class="portfolio__subtitle">Our Showcase</span>
+          <h2 class="section-title">Featured Engineering Work</h2>
+          <div class="section-divider section-divider--center"></div>
+        </div>
+
+        <div class="portfolio__grid">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-card__image-wrapper">
+              <img src="images/project-1.webp" 
+                   alt="Analytics Web Dashboard layout template showing graphs and financial statistics" 
+                   class="project-card__image"
+                   width="400" 
+                   height="300">
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Developer Analytics Panel</h3>
+              <p class="project-card__desc">A detailed dark UI dashboard dashboard built to analyze system stability and layout shifts in real time.</p>
+              <a href="#" class="project-card__link">View Case Study <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-card__image-wrapper">
+              <img src="images/project-2.webp" 
+                   alt="Sleek e-commerce visual layout showing multiple cards with hover options" 
+                   class="project-card__image"
+                   width="400" 
+                   height="300">
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Fintech Landing Page</h3>
+              <p class="project-card__desc">Modern landing page layout focusing on responsive typography hierarchy and high color-contrast visual elements.</p>
+              <a href="#" class="project-card__link">View Case Study <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card">
+            <div class="project-card__image-wrapper">
+              <img src="images/project-3.webp" 
+                   alt="A clean interface of a productivity and task tracker application" 
+                   class="project-card__image"
+                   width="400" 
+                   height="300">
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Productivity Workspace</h3>
+              <p class="project-card__desc">A micro-aligned UI for scheduling, structured with strict CSS flexbox to ensure elastic layout sizing.</p>
+              <a href="#" class="project-card__link">View Case Study <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card">
+            <div class="project-card__image-wrapper">
+              <img src="images/project-4.webp" 
+                   alt="A matrix of matrix codes and servers displaying cloud networking flows" 
+                   class="project-card__image"
+                   width="400" 
+                   height="300">
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Cloud Resource Monitor</h3>
+              <p class="project-card__desc">Complex network visualizing board constructed utilizing two-dimensional CSS Grid macro structures.</p>
+              <a href="#" class="project-card__link">View Case Study <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="project-card">
+            <div class="project-card__image-wrapper">
+              <img src="images/project-5.webp" 
+                   alt="Interactive portfolio layout mockup shown on a creative tablet computer" 
+                   class="project-card__image"
+                   width="400" 
+                   height="300">
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Creative Agency Platform</h3>
+              <p class="project-card__desc">A beautiful design with glassmorphic cards and soft micro-interactions built entirely with clean CSS rules.</p>
+              <a href="#" class="project-card__link">View Case Study <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Project 6 -->
+          <article class="project-card">
+            <div class="project-card__image-wrapper">
+              <img src="images/project-6.webp" 
+                   alt="A user interacting with mobile financial banking applications on a clean desk" 
+                   class="project-card__image"
+                   width="400" 
+                   height="300">
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">Mobile Checkout App</h3>
+              <p class="project-card__desc">A lightweight, lightning-fast application layout design optimized for mobile screen reader access.</p>
+              <a href="#" class="project-card__link">View Case Study <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="contact__container">
+        <div class="contact__info">
+          <h2 class="section-title">Let's Connect</h2>
+          <div class="section-divider"></div>
+          <p class="contact__desc">Ready to build something structurally sound and visually stunning? Get in touch with our engineering team.</p>
+          
+          <ul class="contact__list" aria-label="Contact Details">
+            <li class="contact__item">
+              <i class="fa-solid fa-phone contact__icon-detail" aria-hidden="true"></i>
+              <span class="contact__text-detail">+91 89330 06408</span>
+            </li>
+            <li class="contact__item">
+              <i class="fa-solid fa-envelope contact__icon-detail" aria-hidden="true"></i>
+              <span class="contact__text-detail">decodelabs.tech@gmail.com</span>
+            </li>
+            <li class="contact__item">
+              <i class="fa-solid fa-globe contact__icon-detail" aria-hidden="true"></i>
+              <span class="contact__text-detail">www.decodelabs.tech</span>
+            </li>
+            <li class="contact__item">
+              <i class="fa-solid fa-location-dot contact__icon-detail" aria-hidden="true"></i>
+              <span class="contact__text-detail">Greater Lucknow, India</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact__form-wrapper">
+          <form class="form" aria-label="Send a message form">
+            <div class="form__group">
+              <label for="name" class="form__label">Full Name</label>
+              <input type="text" id="name" class="form__input" placeholder="Your Name" required>
+            </div>
+            <div class="form__group">
+              <label for="email" class="form__label">Email Address</label>
+              <input type="email" id="email" class="form__input" placeholder="you@example.com" required>
+            </div>
+            <div class="form__group">
+              <label for="message" class="form__label">Project Details</label>
+              <textarea id="message" rows="4" class="form__input form__input--textarea" placeholder="Describe your design architecture details..." required></textarea>
+            </div>
+            <button type="submit" class="button button--primary button--full">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__brand">
+        <span class="footer__logo">DECODE<span class="footer__logo-highlight">LABS</span></span>
+        <p class="footer__tagline">Engineering Foundations &copy; 2026. All Rights Reserved.</p>
+      </div>
+      <div class="footer__socials">
+        <a href="#" class="footer__social-link" aria-label="Facebook Profile"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+        <a href="#" class="footer__social-link" aria-label="Twitter Profile"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
+        <a href="#" class="footer__social-link" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+        <a href="#" class="footer__social-link" aria-label="GitHub Profile"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
